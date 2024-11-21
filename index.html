@@ -1,6 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
@@ -36,22 +48,82 @@
       }
 
       .card {
-        height: 500px;
-        width: 300px;
+        height: 640px;
+        width: 375px;
         background-color: white;
-        border-radius: 5%;
+        border-radius: 5px;
       }
 
       img {
-        height: 200px;
-        width: 300px;
-        border-radius: 15px 15px 0px 0px;
+        height: 275px;
+        width: 375px;
+        border-radius: 5px 5px 0px 0px;
       }
 
       .card-body {
         padding-left: 20px;
         padding-right: 20px;
         padding-bottom: 20px;
+      }
+
+      .product {
+        font-family: "Montserrat", serif;
+        color: grey;
+        font-size: small;
+      }
+
+      h1 {
+        font-family: "Fraunces", serif;
+        margin-top: 0;
+      }
+
+      .info {
+        font-family: "Montserrat", serif;
+        color: gray;
+        margin-bottom: 0;
+        font-size: large;
+      }
+
+      .price-container {
+        display: flex;
+        align-items: center;
+        height: 80px;
+      }
+
+      .price {
+        font-family: "Fraunces", serif;
+        font-weight: 700;
+        color: hsl(158, 36%, 37%);
+        padding-right: 20px;
+        align-self: center;
+        font-size: xx-large;
+      }
+
+      .old-price {
+        font-family: "Montserrat", serif;
+        color: gray;
+        text-decoration-line: line-through;
+      }
+
+      .button-container {
+        display: flex;
+        justify-content: center; /* Horizontally center the button */
+        align-items: center; /* Vertically center the button */
+        height: 100%; /* Ensure it fills the parent's height for proper centering */
+        width: 100%;
+      }
+
+      button {
+        background-color: hsl(158, 36%, 37%);
+        color: white; /* Optional: Ensure text is readable */
+        border: none;
+        width: 100%;
+        border-radius: 10px;
+        padding: 15px; /* Add padding for a larger clickable area */
+        cursor: pointer; /* Indicates it's clickable */
+        transition: background-color 0.3s; /* Smooth hover effect */
+        margin-top: 0;
+        font-weight: 600;
       }
     </style>
   </head>
@@ -60,15 +132,17 @@
       <div class="card">
         <img src="images/image-product-mobile.jpg" alt="perfume picture" />
         <div class="card-body">
-          <p>Perfume</p>
-          <h3>Gabrielle Essence Eau De Parfum</h3>
-          <p>
+          <p class="product">P E R F U M E</p>
+          <h1>Gabrielle Essence Eau De Parfum</h1>
+          <p class="info">
             A floral, solar and voluptuous interpretation composed by Olivier
             Polge, Perfumer-Creator for the House of CHANEL.
           </p>
-          <div>
-            <div>$149.99</div>
-            <div>$169.99</div>
+          <div class="price-container">
+            <p class="price">$149.99</p>
+            <div class="old-price">$169.99</div>
+          </div>
+          <div class="button-container">
             <button>Add to Cart</button>
           </div>
         </div>
