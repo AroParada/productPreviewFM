@@ -48,16 +48,16 @@
       }
 
       .card {
-        height: 640px;
-        width: 375px;
+        height: 625px;
+        width: 350px;
         background-color: white;
-        border-radius: 5px;
+        border-radius: 10px;
       }
 
       img {
-        height: 275px;
-        width: 375px;
-        border-radius: 5px 5px 0px 0px;
+        height: 250px;
+        width: 350px;
+        border-radius: 10px 10px 0px 0px;
       }
 
       .card-body {
@@ -81,13 +81,13 @@
         font-family: "Montserrat", serif;
         color: gray;
         margin-bottom: 0;
-        font-size: large;
+        font-size: medium;
       }
 
       .price-container {
         display: flex;
         align-items: center;
-        height: 80px;
+        height: 70px;
       }
 
       .price {
@@ -106,7 +106,7 @@
       }
 
       .button-container {
-        display: flex;
+        display: inline;
         justify-content: center; /* Horizontally center the button */
         align-items: center; /* Vertically center the button */
         height: 100%; /* Ensure it fills the parent's height for proper centering */
@@ -122,28 +122,96 @@
         padding: 15px; /* Add padding for a larger clickable area */
         cursor: pointer; /* Indicates it's clickable */
         transition: background-color 0.3s; /* Smooth hover effect */
-        margin-top: 0;
         font-weight: 600;
+      }
+
+      .cartLogo {
+        width: 1em; /* Match the size of the font (text) */
+        height: auto; /* Maintain aspect ratio */
+        margin-right: 8px; /* Add some spacing between the image and text */
+        transform: translateY(2px); /* Move the logo slightly downward */
+      }
+
+      @media only screen and (min-width: 1000px) {
+        .card {
+          height: 400px;
+          width: 600px;
+          background-color: white;
+          border-radius: 10px;
+        }
+
+        .cardContents {
+          display: flex;
+        }
+
+        img {
+          height: 400px;
+          width: 280px;
+          border-radius: 10px 0px 0px 10px;
+        }
+
+        .button-container {
+          display: inline;
+          justify-content: center; /* Horizontally center the button */
+          align-items: center; /* Vertically center the button */
+          height: 100%; /* Ensure it fills the parent's height for proper centering */
+          width: 100%;
+        }
+
+        h1 {
+          font-family: "Fraunces", serif;
+          margin-top: 0;
+        }
+
+        .info {
+          font-family: "Montserrat", serif;
+          color: gray;
+          margin-bottom: 0;
+          font-size: small;
+        }
+        .card-body {
+          margin: 20px;
+        }
+
+        .price {
+          font-size: x-large;
+        }
       }
     </style>
   </head>
   <body>
     <div class="container">
       <div class="card">
-        <img src="images/image-product-mobile.jpg" alt="perfume picture" />
-        <div class="card-body">
-          <p class="product">P E R F U M E</p>
-          <h1>Gabrielle Essence Eau De Parfum</h1>
-          <p class="info">
-            A floral, solar and voluptuous interpretation composed by Olivier
-            Polge, Perfumer-Creator for the House of CHANEL.
-          </p>
-          <div class="price-container">
-            <p class="price">$149.99</p>
-            <div class="old-price">$169.99</div>
+        <div class="cardContents">
+          <div class="imgContainer">
+            <img
+              src="images/image-product-mobile.jpg"
+              srcset="images/image-product-desktop.jpg 1000w"
+              sizes="(min-width: 1000px) 1000px, 400vw"
+              alt="perfume picture"
+            />
           </div>
-          <div class="button-container">
-            <button>Add to Cart</button>
+          <div class="card-body">
+            <p class="product">P E R F U M E</p>
+            <h1>Gabrielle Essence Eau De Parfum</h1>
+            <p class="info">
+              A floral, solar and voluptuous interpretation composed by Olivier
+              Polge, Perfumer-Creator for the House of CHANEL.
+            </p>
+            <div class="price-container">
+              <p class="price">$149.99</p>
+              <div class="old-price">$169.99</div>
+            </div>
+            <div class="button-container">
+              <button>
+                <img
+                  class="cartLogo"
+                  src="./images/icon-cart.svg"
+                  alt="cart logo"
+                />
+                Add to Cart
+              </button>
+            </div>
           </div>
         </div>
       </div>
