@@ -184,12 +184,16 @@
       <div class="card">
         <div class="cardContents">
           <div class="imgContainer">
-            <img
-              src="images/image-product-mobile.jpg"
-              srcset="images/image-product-desktop.jpg 1000w"
-              sizes="(min-width: 1000px) 1000px, 400vw"
-              alt="perfume picture"
-            />
+            <picture>
+              <source
+                media="(min-width:1000px)"
+                srcset="images/image-product-desktop.jpg"
+              />
+              <img
+                src="./images/image-product-mobile.jpg"
+                alt="perfume picture"
+              />
+            </picture>
           </div>
           <div class="card-body">
             <p class="product">P E R F U M E</p>
